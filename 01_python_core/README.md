@@ -14,10 +14,9 @@ Di seguito l'elenco dei programmi attualmente operativi. Ogni modulo è isolato 
 
 | Directory Modulo | Descrizione Operazione | Dipendenze / Librerie | Stato |
 | :--- | :--- | :--- | :---: |
-| 📁 **`/cartella1`** | *[Inserisci qui cosa fa il primo programma]* | *[es. requests, pandas]* | 🟢 Attivo |
-| 📁 **`/cartella2`** | *[Inserisci qui cosa fa il secondo programma]* | *[es. os, sys]* | 🟢 Attivo |
-| 📁 **`/cartella3`** | *[Inserisci qui cosa fa il terzo programma]* | *[es. python-telegram-bot]* | 🟡 In Test |
-| 📁 **`/cartella_n`** | *[Spazio per futuri caricamenti]* | *-* | ⚪ Vuoto |
+| 📁 **`/AuraFarming`** | Player video da terminale che converte i frame in testo ASCII in tempo reale. Sincronizzazione audio inclusa. | `opencv-python`, `ffpyplayer`, `Pillow`, `numpy` | 🟢 Attivo |
+| 📁 **`/cartella2`** | *[In attesa di assegnazione]* | *-* | ⚪ Vuoto |
+| 📁 **`/cartella3`** | *[In attesa di assegnazione]* | *-* | ⚪ Vuoto |
 
 ---
 
