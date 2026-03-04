@@ -82,6 +82,25 @@
 
 ---
 
+## 🌐 NODO DI ACCESSO REMOTO // (Macchina Virtuale Linux)
+
+Hai bisogno di testare comandi di sistema, esplorare directory o simulare un ambiente server? 
+
+Questo nodo ti fornisce un accesso diretto a una **Macchina Virtuale Debian (Linux)** completa. Il sistema gira interamente nel tuo browser tramite WebAssembly: è un ambiente "usa e getta" e isolato al 100%. Qualsiasi modifica farai andrà persa alla chiusura della sessione, garantendo zero rischi per il tuo sistema locale e per questo hub.
+
+> ⚠️ **ATTENZIONE // PROTOCOLLO DI USCITA:** > Per non disconnetterti da questo hub centrale, **clicca sul pulsante qui sotto con la ROTELLINA DEL MOUSE** oppure premi **CTRL + Clic** (Windows) / **CMD + Clic** (Mac) per aprire il terminale di sistema in una nuova scheda.
+
+<br>
+
+<div align="left">
+  <a href="https://webvm.io/" target="_blank">
+    <img src="https://img.shields.io/badge/INIZIALIZZA_NODO_LINUX-000000?style=for-the-badge&logo=linux&logoColor=00FF00&borderColor=00FF00" alt="Avvia Macchina Virtuale" />
+  </a>
+</div>
+
+---
+
+
 ## 📈 TELEMETRIA_OPERATIVA // (Sensori Locali)
 
 ```text
