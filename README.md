@@ -97,9 +97,12 @@ Questo nodo ti fornisce un accesso diretto a una **Macchina Virtuale Debian (Lin
     <img src="https://img.shields.io/badge/INIZIALIZZA_NODO_LINUX-000000?style=for-the-badge&logo=linux&logoColor=00FF00&borderColor=00FF00" alt="Avvia Macchina Virtuale" />
   </a>
 </div>
+> 🛡️ **RESTRIZIONI DI SICUREZZA // (Sandbox di Rete):**
+> Il nodo operativo gira in una sandbox WebAssembly protetta. I protocolli di rete a basso livello (come `ping` o `ifconfig`) vengono automaticamente bloccati dal firewall del browser per prevenire accessi hardware non autorizzati. 
+> * **[ CONSENTITO ]:** Manipolazione file (`ls`, `nano`), script (`python3`, `gcc`), richieste HTTP (`curl`, `wget`).
+> * **[ NEGATO ]:** Configurazione schede di rete, Raw Sockets.
 
 ---
-
 
 ## 📈 TELEMETRIA_OPERATIVA // (Sensori Locali)
 
