@@ -23,21 +23,19 @@ Di seguito l'elenco dei programmi attualmente operativi. Ogni modulo è isolato 
 ## ☁️ AMBIENTE CLOUD // (Sandbox Interattiva)
 
 <p align="left">
-  <a href="https://colab.research.google.com/#create=true" target="_blank">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Courier+New&weight=600&size=16&pause=1000&color=00FF00&vCenter=true&width=400&lines=>_Connessione_al_Server_Cloud...;>_Inizializzazione_Sandbox...;>_Terminale_Pronto_all'uso." alt="Terminale Animato" />
-  </a>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Courier+New&weight=600&size=16&pause=1000&color=00FF00&vCenter=true&width=400&lines=>_Connessione_al_Server_Cloud...;>_Inizializzazione_Sandbox...;>_Terminale_Pronto_all'uso." alt="Terminale Animato" />
 </p>
 
 Vuoi scrivere e testare del codice Python da zero, importando le tue librerie, ma senza toccare il tuo sistema locale? 
 
 Accedi al terminale cloud isolato di Google Colab. Avrai a disposizione un ambiente vuoto pronto all'uso direttamente nel browser. Se ti servono librerie specifiche, ti basterà installarle scrivendo `!pip install nome_libreria` nella prima cella.
 
-*(Tip di sistema: Premi **CTRL + Clic** o **CMD + Clic** sul pulsante qui sotto per aprire il terminale in una nuova scheda e mantenere attiva questa pagina).*
+> ⚠️ **ATTENZIONE // PROTOCOLLO DI USCITA:** > Per non disconnetterti da questo hub centrale, **clicca sul pulsante qui sotto con la ROTELLINA DEL MOUSE** oppure premi **CTRL + Clic** (Windows) / **CMD + Clic** (Mac) per aprire l'ambiente in una nuova scheda.
 
 <br>
 
 <div align="left">
-  <a href="https://colab.research.google.com/#create=true" target="_blank">
+  <a href="https://colab.research.google.com/#create=true">
     <img src="https://img.shields.io/badge/AVVIA_TERMINALE_CLOUD-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white&borderColor=F9AB00" alt="Avvia Colab" />
   </a>
 </div>
