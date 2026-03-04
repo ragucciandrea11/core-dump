@@ -20,6 +20,16 @@ Di seguito l'elenco dei programmi attualmente operativi. Ogni modulo è isolato 
 
 ---
 
+## ☁️ AMBIENTE CLOUD // (Sandbox Interattiva)
+
+Vuoi scrivere e testare del codice Python da zero, importando le tue librerie? 
+
+Accedi al terminale cloud isolato di Google Colab. Avrai a disposizione un ambiente vuoto pronto all'uso direttamente nel browser. Se ti servono librerie specifiche, ti basterà installarle scrivendo `!pip install nome_libreria` nella prima cella di codice.
+
+[![Apri in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/#create=true)
+
+---
+
 ## ⚙️ PROTOCOLLO DI ESECUZIONE // (Tutorial per Novizi)
 
 Questo repository utilizza script Python che potrebbero richiedere librerie esterne. Per evitare di inquinare il tuo sistema operativo, **è obbligatorio utilizzare un Ambiente Virtuale (venv)**. 
