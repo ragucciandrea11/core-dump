@@ -41,7 +41,7 @@ python main.py "percorso/del/tuo/video.mp4"
 ---
 
 <div align="center">
-  <p style="color: #444;"><i>// Sviluppato e manutenuto da TUO_NOME_QUI</i></p>
+  <p style="color: #444;"><i>// Sviluppato e manutenuto da Andrea Ragucci</i></p>
   <a href="../README.md"><img src="https://img.shields.io/badge/TORNA_AL_CATALOGO_PYTHON-000000?style=for-the-badge&logo=gnu-bash&logoColor=00FF00&borderColor=00FF00" alt="Back" /></a>
 </div>
 
