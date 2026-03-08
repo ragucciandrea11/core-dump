@@ -28,12 +28,12 @@ Di seguito la tabella di cablaggio per replicare il nodo hardware. **Tutti i LED
 
 ### Schema di Montaggio (Breadboard)
 <div align="center">
-  <img src="./assets/tinkercad_breadboard.png" width="90%" style="border: 1px solid #444;" alt="Montaggio Breadboard" />
+  <img src="./assets/tinkercad_breadboard.jpg" width="90%" style="border: 1px solid #444;" alt="Montaggio Breadboard" />
 </div>
 
 ### Schema Elettrico di Circuito
 <div align="center">
-  <img src="./assets/tinkercad_schematic.png" width="90%" style="border: 1px solid #444;" alt="Schema Elettrico" />
+  <img src="./assets/tinkercad_schematic.jpg" width="90%" style="border: 1px solid #444;" alt="Schema Elettrico" />
 </div>
 
 ### Distinta Base (Componenti)
