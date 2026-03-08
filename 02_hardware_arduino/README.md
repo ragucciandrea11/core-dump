@@ -6,6 +6,14 @@
   <i>Directory di livello 2. Contiene firmware in C++, schemi di cablaggio e collaudi fisici di microcontrollori.</i>
 </p>
 
+<div align="center">
+  <a href="https://www.tinkercad.com/users/48vGDviFe5r?type=circuits">
+    <img src="https://img.shields.io/badge/VISUALIZZA_I_MIEI_PROGETTI_TINKERCAD-000000?style=for-the-badge&logo=autodesk&logoColor=00FF00&borderColor=00FF00" alt="I Miei Progetti" />
+  </a>
+</div>
+
+<br>
+
 ---
 
 ## 📋 INDICE DEI MODULI // (Circuiti Caricati)
