@@ -80,7 +80,11 @@ Il firmware include una patch di timeout sul comando `pulseIn()` per azzerare il
 ### Dimostrazione Operativa
 *(Clicca sul link qui sotto per scaricare/vedere il collaudo del sistema)*
 
-🎬 **[GUARDA IL VIDEO DIMOSTRATIVO >>](./assets/real_demo.mp4)**
+🎬 **
+
+https://github.com/user-attachments/assets/3f8c060b-b88c-4166-ab82-17748abf6f50
+
+**
 
 ---
 <div align="center">
