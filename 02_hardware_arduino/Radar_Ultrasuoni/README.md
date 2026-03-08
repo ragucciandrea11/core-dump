@@ -28,12 +28,12 @@ Di seguito la tabella di cablaggio per replicare il nodo hardware. **Tutti i LED
 
 ### Schema di Montaggio (Breadboard)
 <div align="center">
-  <img src="./assets/tinkercad_breadboard.jpg" width="90%" style="border: 1px solid #444;" alt="Montaggio Breadboard" />
+  <img src="./assets/tinkercad_breadboard.jpg" width="60%" style="border: 1px solid #444;" alt="Montaggio Breadboard" />
 </div>
 
 ### Schema Elettrico di Circuito
 <div align="center">
-  <img src="./assets/tinkercad_schematic.jpg" width="90%" style="border: 1px solid #444;" alt="Schema Elettrico" />
+  <img src="./assets/tinkercad_schematic.jpg" width="60%" style="border: 1px solid #444;" alt="Schema Elettrico" />
 </div>
 
 ### Distinta Base (Componenti)
@@ -74,16 +74,13 @@ Il firmware include una patch di timeout sul comando `pulseIn()` per azzerare il
 
 ### Circuito Assemblato
 <div align="center">
-  <img src="./assets/real_circuit.jpg" width="90%" style="border: 2px solid #00FF00; border-radius: 5px;" alt="Circuito Reale" />
+  <img src="./assets/real_circuit.jpg" width="60%" style="border: 2px solid #00FF00; border-radius: 5px;" alt="Circuito Reale" />
 </div>
 
 ### Dimostrazione Operativa
-*(Video dimostrativo del sistema in funzione con ostacoli in avvicinamento)*
-<div align="center">
-  <video src="./assets/real_demo.mp4" width="90%" controls></video>
-</div>
+*(Clicca sul link qui sotto per scaricare/vedere il collaudo del sistema)*
 
-<br>
+🎬 **[GUARDA IL VIDEO DIMOSTRATIVO >>](./assets/real_demo.mp4)**
 
 ---
 <div align="center">
