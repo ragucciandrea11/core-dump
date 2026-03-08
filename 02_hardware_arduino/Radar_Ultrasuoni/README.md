@@ -74,15 +74,16 @@ Il firmware include una patch di timeout sul comando `pulseIn()` per azzerare il
 
 ### Circuito Assemblato
 <div align="center">
-  <img src="./assets/real_circuit.jpg" width="60%" style="border: 2px solid #00FF00; border-radius: 5px;" alt="Circuito Reale" />
+  <img src="./assets/real_circuit.jpg" width="70%" height="60%" style="border: 2px solid #00FF00; border-radius: 5px;" alt="Circuito Reale" />
 </div>
 
 ### Dimostrazione Operativa
 *(Clicca sul link qui sotto per scaricare/vedere il collaudo del sistema)*
-
 🎬 **
 
-https://github.com/user-attachments/assets/3f8c060b-b88c-4166-ab82-17748abf6f50
+
+https://github.com/user-attachments/assets/f6277eee-dfb7-4e15-bd11-c7f047030447
+
 
 **
 
