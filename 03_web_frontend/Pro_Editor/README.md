@@ -4,6 +4,13 @@
   <i>Un vero e proprio IDE (Integrated Development Environment) basato su browser. Un clone avanzato in stile CodePen con Live Preview, Syntax Highlighting e Linting in tempo reale.</i>
 </p>
 
+<div align="center">
+  <a href="https://ragucciandrea11.github.io/core-dump/03_web_frontend/Pro_Editor/" target="_blank">
+    <img src="https://img.shields.io/badge/🔴_LIVE_DEMO-APRI_L'EDITOR_NEL_BROWSER-FF0000?style=for-the-badge" alt="Live Demo" />
+  </a>
+</div>
+<br>
+
 ---
 
 ## 🚀 PANORAMICA DEL SISTEMA
@@ -15,7 +22,7 @@ Questo progetto non è un semplice sito statico, ma un'applicazione web compless
 * **Real-Time Linting:** Rilevamento degli errori di sintassi in tempo reale grazie all'integrazione di `JSHint`, `CSSLint` e `HTMLHint`. I "pallini rossi" avvisano lo sviluppatore prima ancora di eseguire il codice.
 * **Gestione Temi:** Switch dinamico tra temi professionali (Monokai, Dracula, Material Darker, Nord) tramite manipolazione CSS Variables.
 * **I/O File System:** Capacità di esportare il progetto completo in un singolo file `.html` o di caricare file esistenti direttamente dal PC locale.
-* **Templates Pronti:** Sistema di caricamento rapido di snippet precompilati (Tutorial Card, Orologio Digitale).
+* **Templates Pronti:** Sistema di caricamento rapido di snippet precompilati (Tutorial Card, Orologio Digitale, Documento Vuoto).
 
 ---
 
@@ -30,16 +37,21 @@ Il progetto è diviso in modo rigoroso tra UI, Stili e Logica applicativa:
 | 🧠 `script.dev.js` | **Sorgente di Sviluppo:** Il codice sorgente leggibile e commentato. Contiene la logica di binding degli editor, l'aggiornamento dell'iframe e la gestione eventi. |
 | 🔒 `script.min.js` | **Build di Produzione:** Versione minificata e offuscata del motore JS per ottimizzare il caricamento e proteggere la logica. |
 | 📦 `tutorial-*.html` | Componenti template caricabili dinamicamente nell'editor. |
+| 📄 `vuoto.html` | Template per azzerare l'ambiente di lavoro. |
 
 ---
 
 ## 🛠️ DEPLOYMENT & UTILIZZO
 
-L'ambiente è completamente *client-side* (non richiede server Node.js o database).
+L'ambiente è progettato per funzionare in modo 100% *client-side*, senza necessità di server backend.
 
-1. Clona o scarica questa repository.
-2. Apri il file `index.html` con qualsiasi browser moderno (Chrome, Firefox, Edge).
-3. Inizia a digitare nei tre pannelli (HTML/CSS/JS) o seleziona un template dal menu superiore per vedere l'iframe aggiornarsi in tempo reale.
+**Opzione 1: Live Server (GitHub Pages)**
+Clicca sul badge "LIVE DEMO" in cima a questa pagina per avviare l'editor direttamente dal tuo browser tramite il server di GitHub.
+
+**Opzione 2: Esecuzione Locale**
+1. Clona o scarica questa repository sul tuo PC.
+2. Naviga nella cartella `/Pro_Editor`.
+3. Fai doppio clic sul file `index.html` per aprirlo. Tutto il codice verrà eseguito localmente sul tuo browser.
 
 ---
 <br>
