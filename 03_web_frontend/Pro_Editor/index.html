@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Editor Pro - Definitivo</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/monokai.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material-darker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/nord.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/lint/lint.min.css">
+</head>
+<body data-theme="dark">
+
+    <div class="navbar">
+        <h2>💻 Editor PRO</h2>
+        
+        <button class="btn-menu" onclick="caricaTutorial('tutorial-1.html', this)">1. Biglietto</button>
+        <button class="btn-menu" onclick="caricaTutorial('tutorial-2.html', this)">2. Orologio</button>
+        <button class="btn-menu" onclick="caricaTutorial('vuoto.html', this)">+ Foglio Vuoto</button>
+        
+        <div class="separatore"></div>
+
+        <button class="btn-azione" onclick="document.getElementById('file-input').click()">📂 Carica File</button>
+        <input type="file" id="file-input" style="display: none;" accept=".html,.txt" onchange="leggiFile(event)">
+        <button class="btn-azione" onclick="scaricaFile()">💾 Scarica</button>
+
+        <div class="separatore"></div>
+
+        <select id="theme-selector" class="theme-select" onchange="cambiaTemaEditor()">
+            <option value="monokai">Monokai (Default)</option>
+            <option value="dracula">Dracula</option>
+            <option value="material-darker">Material Dark</option>
+            <option value="nord">Nord</option>
+            <option value="default">Light (Chiaro)</option>
+        </select>
+
+        <button id="theme-toggle" class="btn-theme" onclick="cambiaTemaUI()">☀️ Light UI</button>
+    </div>
+
+    <div class="main-container">
+        
+        <div class="editors-column" id="left-panel">
+            
+            <div id="single-view" class="view-container" style="display: none;">
+                <div class="editor-title">CODICE COMPLETO</div>
+                <div class="editor-content"><textarea id="single-editor"></textarea></div>
+            </div>
+            
+            <div id="split-view" class="view-container">
+                <div class="editor-box" id="box-html">
+                    <div class="editor-title html-title" onclick="togglePanel('box-html')">
+                        <span>HTML</span> <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="editor-content"><textarea id="html-editor"></textarea></div>
+                </div>
+                
+                <div class="editor-box" id="box-css">
+                    <div class="editor-title css-title" onclick="togglePanel('box-css')">
+                        <span>CSS</span> <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="editor-content"><textarea id="css-editor"></textarea></div>
+                </div>
+                
+                <div class="editor-box" id="box-js">
+                    <div class="editor-title js-title" onclick="togglePanel('box-js')">
+                        <span>JAVASCRIPT</span> <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="editor-content"><textarea id="js-editor"></textarea></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="resizer" id="drag-bar"></div>
+
+        <div class="preview-column" id="right-panel">
+            <div class="editor-title prev-title">ANTEPRIMA LIVE</div>
+            <iframe id="live-preview" sandbox="allow-scripts"></iframe>
+        </div>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/htmlmixed/htmlmixed.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/closetag.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/fold/xml-fold.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/matchtags.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.13.6/jshint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/csslint/1.0.5/csslint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/htmlhint/1.1.4/htmlhint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/lint/lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/lint/javascript-lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/lint/css-lint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/lint/html-lint.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.9/beautify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.9/beautify-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.9/beautify-html.min.js"></script>
+
+    <script src="script.min.js"></script>
+</body>
+</html>

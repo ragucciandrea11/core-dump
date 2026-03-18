@@ -1,0 +1,12 @@
+<style>
+  body { display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #111; margin: 0; font-family: monospace; }
+  .clock { color: #0f0; font-size: 70px; text-shadow: 0 0 15px #0f0; border: 3px solid #0f0; padding: 20px; border-radius: 10px; }
+</style>
+<div class="clock" id="time">00:00:00</div>
+<script>
+  function updateClock() {
+    document.getElementById('time').textContent = new Date().toLocaleTimeString('it-IT');
+  }
+  setInterval(updateClock, 1000);
+  updateClock(); 
+</script>

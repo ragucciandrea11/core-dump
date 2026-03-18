@@ -1,0 +1,139 @@
+:root {
+    --bg-main: #f4f4f9;
+    --bg-nav: #e0e0e0;
+    --bg-panel: #ffffff;
+    --text-main: #333333;
+    --border-color: #cccccc;
+    --title-bg: #d5d5d5;
+    --accent: #4CAF50;
+}
+
+[data-theme="dark"] {
+    --bg-main: #2d2d2d;
+    --bg-nav: #111111;
+    --bg-panel: #1e1e1e;
+    --text-main: #ffffff;
+    --border-color: #333333;
+    --title-bg: #252526;
+}
+
+* { box-sizing: border-box; }
+
+body { 
+    margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: var(--bg-main); color: var(--text-main);
+    height: 100vh; display: flex; flex-direction: column; 
+    overflow: hidden;
+}
+
+/* NAVBAR */
+.navbar { 
+    background: var(--bg-nav); padding: 8px 15px; 
+    display: flex; gap: 10px; align-items: center; 
+    border-bottom: 2px solid var(--accent); flex-wrap: wrap; 
+}
+.navbar h2 { margin: 0 15px 0 0; font-size: 16px; color: var(--accent); letter-spacing: 1px;}
+
+.btn-menu, .btn-azione, .btn-theme { 
+    border: none; padding: 7px 12px; border-radius: 4px; cursor: pointer; 
+    font-weight: bold; font-size: 12px; transition: 0.3s;
+}
+.btn-menu { background-color: #555; color: white; }
+.btn-menu:hover, .btn-menu.attivo { background-color: var(--accent); }
+
+.btn-azione { background-color: #007bff; color: white; }
+.btn-azione:hover { background-color: #0056b3; }
+
+.btn-theme {
+    margin-left: auto; background-color: transparent; color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+.btn-theme:hover { background-color: var(--accent); color: white; border-color: var(--accent); }
+
+/* SELECT MENU TEMI */
+.theme-select {
+    background: var(--bg-panel); color: var(--text-main);
+    border: 1px solid var(--border-color); padding: 5px; border-radius: 4px;
+    font-size: 12px; cursor: pointer; outline: none;
+}
+
+.separatore { width: 1px; height: 20px; background-color: var(--border-color); margin: 0 5px; }
+
+/* CONTENITORE PRINCIPALE */
+.main-container { display: flex; flex: 1; overflow: hidden; min-height: 0; }
+
+.editors-column { 
+    width: 50%; display: flex; flex-direction: column; 
+    background: var(--bg-panel); min-height: 0; position: relative;
+}
+
+/* RESIZER */
+.resizer {
+    width: 6px; background-color: var(--border-color); cursor: col-resize; 
+    z-index: 10; transition: 0.2s;
+}
+.resizer:hover, .resizer:active { background-color: var(--accent); }
+
+.preview-column { 
+    flex: 1; display: flex; flex-direction: column; background: #fff; min-height: 0; 
+}
+
+/* PANNELLI EDITORS (Fisarmonica) */
+.view-container { flex: 1; display: flex; flex-direction: column; height: 100%; min-height: 0; }
+
+.editor-box { 
+    flex: 1; display: flex; flex-direction: column; 
+    border-bottom: 1px solid var(--border-color); 
+    min-height: 0; transition: flex 0.4s ease; /* Transizione per la chiusura */
+}
+.editor-box:last-child { border-bottom: none; }
+
+/* Quando il pannello è chiuso */
+.editor-box.collapsed {
+    flex: 0 0 32px !important; /* Diventa piccolissimo, resta solo il titolo */
+    overflow: hidden;
+}
+
+.editor-title { 
+    background: var(--title-bg); padding: 8px 15px; 
+    font-size: 11px; font-weight: bold; letter-spacing: 1.5px; 
+    color: var(--text-main); cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    user-select: none;
+}
+.editor-title:hover { filter: brightness(1.1); }
+
+.toggle-icon { font-size: 10px; transition: transform 0.3s; }
+.collapsed .toggle-icon { transform: rotate(-90deg); }
+
+.editor-content { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+
+/* COLORI TITOLI */
+.html-title { border-left: 4px solid #e34c26; }
+.css-title { border-left: 4px solid #264de4; }
+.js-title { border-left: 4px solid #f0db4f; }
+.prev-title { background: #eee; color: #333; border-bottom: 1px solid #ccc; cursor: default; }
+
+iframe { flex: 1; border: none; width: 100%; background: white; }
+
+/* CODEMIRROR CUSTOM */
+.CodeMirror { flex: 1; height: 100% !important; font-size: 14px; line-height: 1.5; }
+
+/* STILE PER ERRORI (LINTER) */
+.CodeMirror-lint-markers { width: 16px; }
+.CodeMirror-lint-marker-error { background-image: none; position: relative; }
+.CodeMirror-lint-marker-error::after {
+    content: "●"; color: #ff4444; position: absolute; left: 3px; top: -2px; font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .main-container { flex-direction: column; }
+    .editors-column { width: 100% !important; height: 60%; }
+    .resizer { width: 100%; height: 6px; cursor: row-resize; }
+    .btn-theme { margin-left: 0; }
+}
+
+/* Utility per il resizing */
+body.is-resizing iframe { pointer-events: none; }
+body.is-resizing { cursor: col-resize; user-select: none; }
