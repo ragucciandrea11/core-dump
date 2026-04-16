@@ -16,35 +16,32 @@
 Questo progetto è una simulazione di un attacco di Ingegneria Sociale. Dimostra come un'interfaccia web apparentemente innocua (Frontend) possa essere utilizzata per raccogliere credenziali sensibili e trasmetterle di nascosto a un server ostile (Backend).
 
 ### ⚙️ Core Features (Specifiche Tecniche)
-* **Frontend Camouflage:** Interfaccia utente pulita e minimale, progettata in HTML5 e CSS3 per replicare il design system dei moderni portali cloud aziendali (es. Microsoft, Google) e indurre fiducia nell'utente.
-* **Trasmissione Sicura (POST):** I dati inseriti vengono incapsulati nel corpo della richiesta HTTP (metodo `POST`), evitando che le credenziali appaiano in chiaro nell'URL del browser.
-* **Intercettazione Backend (PHP):** Uno script lato server cattura i pacchetti in arrivo, estrae i parametri chiave (email, password) e li registra silenziosamente con un timestamp di sistema.
-* **Evasion Tactics:** Subito dopo il furto dei dati, il server esegue un reindirizzamento forzato (`header location`) verso un sito legittimo per coprire le proprie tracce e non destare sospetti nella vittima.
-* **Isolamento Docker:** L'intero ambiente server (Apache + PHP) è containerizzato e non richiede installazioni locali invasive sul sistema host.
-
----
-
-## 🗂️ ARCHITETTURA DEI FILE
-
-Il progetto è diviso chirurgicamente in due aree: l'esca (Client) e la rete (Server).
-
-| File | Area | Funzione |
-| :--- | :---: | :--- |
-| 📄 `index.html` | Front-End | **L'Esca:** Struttura del modulo di accesso e logica di invio (`<form>`). |
-| 🎨 `style.css` | Front-End | **Il Camuffamento:** Design di sistema, layout flessibile e interazioni visive. |
-| 🧠 `cattura.php` | Back-End | **La Trappola:** Script che processa la richiesta POST, salva i dati ed esegue il redirect. |
-| 🐳 `docker-compose.yml`| DevOps | **L'Infrastruttura:** Ricetta per istanziare istantaneamente un server web Apache con interprete PHP 8.2. |
-| 🗃️ `logs.txt` | Storage | **Il Vault:** File di testo (generato dinamicamente) dove vengono archiviate le credenziali catturate. |
+* **Frontend Camouflage:** Interfaccia utente pulita e minimale, progettata in HTML5 e CSS3 per replicare il design system dei moderni portali cloud aziendali e indurre fiducia nell'utente.
+* **Trasmissione Sicura (POST):** I dati inseriti vengono incapsulati nel corpo della richiesta HTTP, evitando che le credenziali appaiano in chiaro nell'URL.
+* **Intercettazione Backend (PHP):** Uno script lato server cattura i pacchetti in arrivo, estrae i parametri chiave e li registra in `logs.txt` con timestamp.
+* **Evasion Tactics:** Subito dopo il furto dei dati, il server esegue un reindirizzamento forzato verso un sito legittimo per coprire le tracce.
+* **Isolamento Docker:** L'intero ambiente server (Apache + PHP) è containerizzato.
 
 ---
 
 ## 🛠️ DEPLOYMENT & UTILIZZO (Ambiente Locale)
 
-*Nota: Dato che questo modulo richiede l'esecuzione di codice lato server (PHP), non può essere ospitato staticamente su GitHub Pages. Utilizzare l'infrastruttura Docker fornita.*
+1. Apri il terminale e naviga nella cartella `/Red_Team_Sim`.
+2. Avvia il server containerizzato digitando il seguente comando:
+   <pre><code>docker-compose up -d</code></pre>
+3. Apri il browser e vai all'indirizzo <code>http://localhost:8080</code>.
+4. Per spegnere il server a fine operazione, utilizza:
+   <pre><code>docker-compose down</code></pre>
 
-**Protocollo di Innesco:**
-1. Clona o scarica questa repository sul tuo PC locale.
-2. Apri il terminale e naviga nella cartella `/Red_Team_Sim`.
-3. Avvia il server containerizzato digitando:
-   ```bash
-   docker-compose up -d
+---
+<br>
+<div align="center">
+  <a href="../README.md"><img src="https://img.shields.io/badge/TORNA_A_03_WEB_FRONTEND-000000?style=for-the-badge&logo=gnu-bash&logoColor=00FF00&borderColor=00FF00" alt="Back" /></a>
+</div>
+
+<br>
+<div align="center">
+  <p style="color: #00FF00;">
+    🔌 <i>// FINE_TRASMISSIONE_MODULO_RED_TEAM</i>
+  </p>
+</div>

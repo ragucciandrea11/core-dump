@@ -69,7 +69,7 @@
       <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Desktop%20Computer.png" alt="Web" width="45" />
       <h3 style="color: #00FF00;">03_GEOMETRIE_FLUIDE</h3>
       <p><i>Interfacce responsive. Frontend impossibile da rompere.</i></p>
-      <a href="./03_web_interfaces"><img src="https://img.shields.io/badge/ACCEDI-000000?style=for-the-badge&logo=googlechrome&logoColor=00FF00&borderColor=00FF00" /></a>
+      <a href="./03_web_frontend"><img src="https://img.shields.io/badge/ACCEDI-000000?style=for-the-badge&logo=googlechrome&logoColor=00FF00&borderColor=00FF00" /></a>
     </td>
     <td align="center">
       <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Floppy%20Disk.png" alt="DB" width="45" />
