@@ -1,0 +1,12 @@
+# S.H.I.E.L.D. Security Protocol
+.env
+shield_env/
+__pycache__/
+*.pyc
+
+# Cartelle di quarantena e file sospetti
+samples/
+backend/quarantine_zone/
+*.exe
+*.bin
+*.dll

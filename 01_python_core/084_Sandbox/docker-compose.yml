@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  shield-engine:
+    build: .
+    container_name: shield_084_analyzer
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env  # Passa la chiave di VirusTotal al container in modo sicuro
+    volumes:
+      # Mappa la cartella samples locale dentro il container
+      - ./samples:/app/samples
+    restart: unless-stopped

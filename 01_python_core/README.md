@@ -15,10 +15,8 @@ Di seguito l'elenco dei programmi attualmente operativi. Ogni modulo è isolato 
 | Directory Modulo | Descrizione Operazione | Dipendenze / Librerie | Stato |
 | :--- | :--- | :--- | :---: |
 | 📁 **`/AuraFarming`** | Player video da terminale che converte i frame in testo ASCII in tempo reale. Sincronizzazione audio inclusa. | `opencv-python`, `ffpyplayer`, `Pillow`, `numpy` | 🟢 Attivo |
-| 📁 **`/cartella2`** | *[In attesa di assegnazione]* | *-* | ⚪ Vuoto |
+| 📁 **`/084_Sandbox`** | **[S.H.I.E.L.D. Protocol]** Motore di analisi malware e Threat Intelligence. Include Sandbox Dockerizzata e interfaccia web. | `fastapi`, `uvicorn`, `requests`, `python-dotenv`, `python-multipart` | 🟢 Attivo |
 | 📁 **`/cartella3`** | *[In attesa di assegnazione]* | *-* | ⚪ Vuoto |
-
----
 
 ## ☁️ AMBIENTE CLOUD // (Sandbox Interattiva)
 

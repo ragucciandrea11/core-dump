@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>S.H.I.E.L.D. // Main Terminal</title>
+    <style>
+        body { 
+            background-color: #0a0a0a; 
+            color: #00f0ff; 
+            font-family: 'Courier New', Courier, monospace; 
+            padding: 40px; 
+        }
+        h1 { 
+            color: #ff9900; 
+            border-bottom: 2px solid #ff9900; 
+            padding-bottom: 10px; 
+        }
+        .panel { 
+            border: 1px solid #00f0ff; 
+            padding: 20px; 
+            margin-top: 20px; 
+            background: rgba(0, 240, 255, 0.05); 
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+        input[type="file"] { color: #fff; margin-bottom: 15px; }
+        button { 
+            background-color: transparent; 
+            color: #00f0ff; 
+            border: 1px solid #00f0ff; 
+            padding: 10px 20px; 
+            cursor: pointer; 
+            font-weight: bold; 
+        }
+        button:hover { background-color: #00f0ff; color: #0a0a0a; }
+        pre { color: #a5d6ff; white-space: pre-wrap; word-wrap: break-word; }
+        #loader { display: none; color: #ff9900; margin-top: 15px; animation: blink 1s infinite;}
+        @keyframes blink { 50% { opacity: 0; } }
+    </style>
+</head>
+<body>
+    <h1>Protocollo 0-8-4 // Analisi Tattica</h1>
+    
+    <div class="panel">
+        <h3>[ INSERIRE REPERTO DA ANALIZZARE ]</h3>
+        <input type="file" id="artifactInput" />
+        <br>
+        <button onclick="startScan()">AVVIA SCANSIONE</button>
+        <div id="loader">>>> ESTREZIONE DNA IN CORSO... ATTENDERE...</div>
+    </div>
+
+    <div class="panel" id="resultsPanel" style="display:none;">
+        <h3>[ DECRIPTAZIONE COMPLETATA - DATI ESTRATTI ]</h3>
+        <pre id="output"></pre>
+    </div>
+
+    <script>
+        async function startScan() {
+            const fileInput = document.getElementById('artifactInput');
+            if (!fileInput.files[0]) return alert("ERRORE: Inserire un file.");
+
+            document.getElementById('loader').style.display = 'block';
+            document.getElementById('resultsPanel').style.display = 'none';
+
+            const formData = new FormData();
+            formData.append("file", fileInput.files[0]);
+
+            try {
+                const response = await fetch('/api/scan', { method: 'POST', body: formData });
+                const result = await response.json();
+                document.getElementById('output').textContent = JSON.stringify(result, null, 4);
+                document.getElementById('resultsPanel').style.display = 'block';
+            } catch (error) {
+                document.getElementById('output').textContent = "ERRORE DI SISTEMA: " + error;
+                document.getElementById('resultsPanel').style.display = 'block';
+            } finally {
+                document.getElementById('loader').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
