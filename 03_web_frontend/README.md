@@ -1,34 +1,40 @@
 <h1 align="center" style="color: #00FF00;">
-  >> 03_SVILUPPO_WEB // (Frontend Core) 🌐
+  >> 03_SVILUPPO_WEB // (Frontend & Client-Server) 🌐
 </h1>
 
 <p align="center">
-  <i>Directory di livello 3. Contiene applicazioni web, manipolazione del DOM, esperimenti UI/UX e architetture client-side.</i>
+  <i>Directory di livello 3. Contiene applicazioni web, manipolazione del DOM, esperimenti UI/UX e architetture client-server leggere.</i>
 </p>
 
 ---
 
 ## 📋 INDICE DEI MODULI // (Web Apps)
 
-Di seguito l'elenco delle applicazioni e degli script frontend attualmente operativi. 
+Di seguito l'elenco delle applicazioni e degli script web attualmente operativi. 
 
 | Directory Modulo | Descrizione Operazione | Tecnologie | Stato |
 | :--- | :--- | :--- | :---: |
 | 📁 **`/Pro_Editor`** | IDE basato su browser con Live Preview, Syntax Highlighting (CodeMirror) e Real-Time Linting. | HTML, CSS, JS | 🟢 Attivo |
-| 📁 **`/webapp_2`** | *[In attesa di assegnazione]* | *-* | ⚪ Vuoto |
+| 📁 **`/Red_Team_Sim`** | **[Phishing Simulator]** Dimostrazione di intercettazione credenziali (metodo POST) tramite frontend camuffato e backend. | HTML, CSS, PHP, Docker | 🟢 Attivo |
 | 📁 **`/webapp_3`** | *[In attesa di assegnazione]* | *-* | ⚪ Vuoto |
 
 ---
 
 ## ⚙️ PROTOCOLLO DI ESECUZIONE
 
-L'ecosistema di questa directory è progettato per essere **100% Client-Side** (Vanilla JS). Nessun server Node.js o database richiesto per il testing di base.
+L'ecosistema di questa directory contiene sia interfacce puramente **Client-Side**, sia architetture **Client-Server** ibride.
 
-Per avviare i moduli:
-1. Clona il repository sul tuo computer locale.
-2. Naviga all'interno della cartella del modulo desiderato (es. `/Pro_Editor`).
-3. Fai doppio clic sul file **`index.html`** per aprirlo direttamente nel tuo browser predefinito.
-*(Per funzionalità avanzate che richiedono il caricamento di file locali tramite protocollo `file://`, si consiglia l'uso dell'estensione **Live Server** su VS Code).*
+**🟢 Avvio Moduli Standard (Solo Frontend):**
+Per progetti come `Pro_Editor`, non è richiesto alcun server.
+1. Naviga all'interno della cartella del modulo.
+2. Fai doppio clic sul file **`index.html`** per aprirlo direttamente nel tuo browser predefinito.
+*(Consigliato l'uso dell'estensione **Live Server** su VS Code per funzionalità avanzate).*
+
+**☢️ Avvio Moduli Avanzati (Richiedono Backend):**
+Per progetti come `Red_Team_Sim` che elaborano dati tramite PHP:
+1. Apri il terminale nella cartella del progetto.
+2. Innesca il server locale tramite l'infrastruttura containerizzata digitando: `docker-compose up -d`.
+3. Accedi tramite il browser all'indirizzo localhost indicato nel README specifico del modulo.
 
 ---
 <br>

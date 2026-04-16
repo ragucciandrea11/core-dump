@@ -1,0 +1,73 @@
+/* --- RESET DI BASE --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f2f1; /* Grigio chiaro classico aziendale */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* --- LA SCATOLA CENTRALE --- */
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px; /* Bordi leggermente arrotondati */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Ombra morbida per dare profondità */
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 24px;
+    color: #1b1b1b;
+}
+
+/* --- STILE DEL MODULO E DEI CAMPI --- */
+form {
+    display: flex;
+    flex-direction: column; /* Mette gli elementi uno sotto l'altro */
+    text-align: left;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #8a8886;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Effetto quando l'utente clicca sulla casella di testo */
+input:focus {
+    border-color: #0067b8; /* Blu acceso */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 103, 184, 0.2);
+}
+
+/* --- IL PULSANTE DI ACCESSO --- */
+button {
+    background-color: #0067b8; /* Blu aziendale */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Animazione fluida */
+}
+
+/* Effetto quando il mouse passa sopra il pulsante */
+button:hover {
+    background-color: #005da6;
+}
