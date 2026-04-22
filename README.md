@@ -42,7 +42,9 @@
  │
  ├── 03_GEOMETRIE_FLUIDE/         [Stato: OPERATIVO] ──> (UI Responsive, Frontend)
  │
- └── 04_MEMORIA_PERSISTENTE/      [Stato: BLINDATO]  ──> (Database Relazionali, PHP)
+ ├── 04_MEMORIA_PERSISTENTE/      [Stato: BLINDATO]  ──> (Database Relazionali, PHP)
+ │
+ └── 05_PROTOCOLLO_DANTE/         [Stato: VIOLATO]   ──> (Cyber-Security, CTF Lab, RCE)
 ```
 
 ---
@@ -78,6 +80,14 @@
       <a href="./04_database_backend"><img src="https://img.shields.io/badge/ACCEDI-000000?style=for-the-badge&logo=databricks&logoColor=00FF00&borderColor=00FF00" /></a>
     </td>
   </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Shield.png" alt="Sec" width="45" />
+      <h3 style="color: #00FF00;">05_PROTOCOLLO_DANTE</h3>
+      <p><i>Ambiente di addestramento Cyber-Security. Vulnerabilità, CTF e Reverse Shell. <b>La zona rossa.</b></i></p>
+      <a href="./05_protocollo_dante"><img src="https://img.shields.io/badge/ACCEDI_ALLA_ZONA_ROSSA-000000?style=for-the-badge&logo=hackthebox&logoColor=00FF00&borderColor=00FF00" /></a>
+    </td>
+  </tr>
 </table>
 
 ---
@@ -111,6 +121,7 @@ CARICO SISTEMI OPERATIVI E COMPETENZE CORE:
 --------------------------------------------------
 Python         [██████████████████░░] LIVELLO: CRITICO
 Web Design     [█████████████████░░░] LIVELLO: ALTO
+Cyber-Security [███████████████░░░░░] LIVELLO: OPERATIVO
 Arduino/C++    [██████████████░░░░░░] LIVELLO: ALTO
 PHP/MySQL      [█████████████░░░░░░░] LIVELLO: STABILE
 --------------------------------------------------
