@@ -16,7 +16,7 @@ Di seguito l'elenco dei programmi attualmente operativi. Ogni modulo è isolato 
 | :--- | :--- | :--- | :---: |
 | 📁 **`/AuraFarming`** | Player video da terminale che converte i frame in testo ASCII in tempo reale. Sincronizzazione audio inclusa. | `opencv-python`, `ffpyplayer`, `Pillow`, `numpy` | 🟢 Attivo |
 | 📁 **`/084_Sandbox`** | **[S.H.I.E.L.D. Protocol]** Motore di analisi malware e Threat Intelligence. Include Sandbox Dockerizzata e interfaccia web. | `fastapi`, `uvicorn`, `requests`, `python-dotenv`, `python-multipart` | 🟢 Attivo |
-| 📁 **`/WebScraping_Engine`** | Crawler automatizzato per l'estrazione e la classificazione di dati e-commerce. Salva i cataloghi in CSV/Excel. | requests, beautifulsoup4, csv | 🟢 Attivo |
+| 📁 **`/WebScraping_Engine`** | Crawler automatizzato per l'estrazione e la classificazione di dati e-commerce. Salva i cataloghi in CSV/Excel. | `requests`, `beautifulsoup4`, `csv` | 🟢 Attivo |
 
 ## ☁️ AMBIENTE CLOUD // (Sandbox Interattiva)
 
